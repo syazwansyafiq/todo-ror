@@ -2,8 +2,6 @@ class TodoItemsController < ApplicationController
     before_action :set_todo_list
     before_action :set_todo_item, except: [:create]
 
-
-
     def create
         @todo_items = @todo_list.todo_items.create(todo_items_params)
         redirect_to @todo_list
